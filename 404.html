@@ -102,8 +102,6 @@
 				        
 							<li><a href="/archives">所有文章</a></li>
 				        
-							<li><a href="/tags/标签">填个标签</a></li>
-				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -161,8 +159,6 @@
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
-					<li><a href="/tags/标签">填个标签</a></li>
-		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -206,19 +202,13 @@
     }
   }
 </script>
-<h1 style="text-align:center">找不到页面，网页将会在<span id="jumpto"> **5** </span>秒后跳转到<a href="/">首页</a></h1> 
+<h1 style="text-align:center" id="&#x627E;&#x4E0D;&#x5230;&#x9875;&#x9762;&#x7F51;&#x9875;&#x5C06;&#x4F1A;&#x5728;-5-&#x79D2;&#x540E;&#x8DF3;&#x8F6C;&#x5230;&#x9996;&#x9875;">&#x627E;&#x4E0D;&#x5230;&#x9875;&#x9762;&#xFF0C;&#x7F51;&#x9875;&#x5C06;&#x4F1A;&#x5728;<span id="jumpto"> **5** </span>&#x79D2;&#x540E;&#x8DF3;&#x8F6C;&#x5230;<a href="/">&#x9996;&#x9875;</a></h1> 
 
  <p style="text-align:center"> <img src="http://7xk7he.com1.z0.glb.clouddn.com/20131122112727-1356352347.jpg" alt="404 not found"></p>
 
 
 
 <script type="text/javascript">countDown(5,'/');</script>
-
-
-
-
-
-
       
     </div>
     
@@ -249,6 +239,14 @@
 </article>
 
 
+
+<script>
+  var tocEx = function(el){
+    var toc = document.querySelector(el), content = toc.innerHTML;
+    content = content.replace('<!-- toc -->', '<div class="toc"><h3><strong> 文章目录 </strong></h3>').replace('<!-- tocstop -->', '</div>');
+    toc.innerHTML = content;
+  }('.article-entry');
+</script>
 </div>
       <footer id="footer">
   <div class="outer">
@@ -270,6 +268,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow86.js"></script>
+<noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
 
 </footer>
     </div>

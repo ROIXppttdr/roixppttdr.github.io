@@ -168,6 +168,9 @@ a {
   color: #258fb8;
   outline: none;
 }
+a:hover {
+  color: #c66;
+}
 .alignleft {
   float: left;
 }
@@ -2306,4 +2309,14 @@ pre .javascript .function {
   padding: 0;
   height: 100%;
   overflow: hidden;
+}
+.toc {
+  float: right;
+  margin-left: 40px;
+  padding: 10px 20px;
+  background: #f1f1f1;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 3px #bbb;
+  box-shadow: 0 0 3px #bbb;
 }
