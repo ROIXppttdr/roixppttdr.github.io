@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hlfeel.com/nginx-google/</loc>
+    <lastmod>2015-07-18T08:39:14.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://hlfeel.com/hexo/</loc>
-    <lastmod>2015-07-17T05:35:21.000Z</lastmod>
+    <lastmod>2015-07-17T15:31:55.000Z</lastmod>
   </url>
   
   <url>
