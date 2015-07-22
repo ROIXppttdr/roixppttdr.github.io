@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://hlfeel.com//"/>
-  <updated>2015-07-22T14:34:46.000Z</updated>
+  <updated>2015-07-22T17:00:12.000Z</updated>
   <id>http://hlfeel.com//</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[kali虚拟机的安装与基本配置]]></title>
+    <link href="http://hlfeel.com/wooyun-wiki/"/>
+    <id>http://hlfeel.com/wooyun-wiki/</id>
+    <published>2015-07-21T07:17:19.000Z</published>
+    <updated>2015-07-22T17:00:12.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="/picture/kali.gif" alt="kali"></p>
+<h2 id="&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;">&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;</h2><a id="more"></a>
+<!-- toc -->
+<ul>
+<li><a href="#kali-linux">kali linux</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="kali-linux">kali linux</h2>]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="/picture/kali.gif" alt="kali"></p>
+<h2 id="写在前面的话">写在前面的话</h2>]]>
+    
+    </summary>
+    
+      <category term="kali" scheme="http://hlfeel.com/tags/kali/"/>
+    
+      <category term="渗透测试" scheme="http://hlfeel.com/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="网络" scheme="http://hlfeel.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[关于Git的学习笔记]]></title>
