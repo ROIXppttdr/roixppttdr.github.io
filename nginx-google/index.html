@@ -15,9 +15,9 @@
 <meta property="og:description" content="写在前面的话
 为什么要搭建google的反向代理？答：度娘的搜索不解释。
 为什么不用现成的如glgoo.com, gfsoso.com之类的网站？答：自己搭建google反向代理更有挑战性（小菜鸟的想法，别吐槽）。">
-<meta property="og:image" content="http://7xk7he.com1.z0.glb.clouddn.com/20150722004557.gif">
-<meta property="og:image" content="http://7xk7he.com1.z0.glb.clouddn.com/1.gif">
-<meta property="og:updated_time" content="2015-07-21T16:46:36.000Z">
+<meta property="og:image" content="http://hlfeel.com/picture/google_CN.gif">
+<meta property="og:image" content="http://hlfeel.com/picture/google scholar.gif">
+<meta property="og:updated_time" content="2015-07-22T09:24:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在VPS上搭建Google的反向代理">
 <meta name="twitter:description" content="写在前面的话
@@ -39,7 +39,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="http://7xk7he.com1.z0.glb.clouddn.com/f31fbe096b63f624060ad4388544ebf81a4ca3b2.jpg" class="js-avatar">
+			<img lazy-src="/picture/head.jpg" class="js-avatar">
 			
 		</a>
 
@@ -142,7 +142,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img lazy-src="http://7xk7he.com1.z0.glb.clouddn.com/f31fbe096b63f624060ad4388544ebf81a4ca3b2.jpg" class="js-avatar">
+				<img lazy-src="/picture/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author">Roixppttdr</h1>
@@ -216,7 +216,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://7xk7he.com1.z0.glb.clouddn.com/20150722004557.gif" alt="google&#x4EE3;&#x7406;&#x56FE;"></p>
+        <p><img src="/picture/google_CN.gif" alt="google&#x4EE3;&#x7406;&#x56FE;"></p>
 <h2 id="&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;">&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;</h2><ol>
 <li>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x642D;&#x5EFA;google&#x7684;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF1F;<br>&#x7B54;&#xFF1A;&#x5EA6;&#x5A18;&#x7684;&#x641C;&#x7D22;&#x4E0D;&#x89E3;&#x91CA;&#x3002;</li>
 <li>&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x7528;&#x73B0;&#x6210;&#x7684;&#x5982;glgoo.com, gfsoso.com&#x4E4B;&#x7C7B;&#x7684;&#x7F51;&#x7AD9;&#xFF1F;<br>&#x7B54;&#xFF1A;&#x81EA;&#x5DF1;&#x642D;&#x5EFA;google&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x66F4;&#x6709;&#x6311;&#x6218;&#x6027;&#xFF08;&#x5C0F;&#x83DC;&#x9E1F;&#x7684;&#x60F3;&#x6CD5;&#xFF0C;&#x522B;&#x5410;&#x69FD;&#xFF09;&#x3002;</li>
@@ -250,7 +250,7 @@
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># &#x4F8B;&#x5982; &apos;www.google.com&apos; &#x6309;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x4EE3;&#x7406;</span></span><br><span class="line"><span class="comment"># vps(hk) -&gt; vps(us) -&gt; google</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># vps(hk) &#x914D;&#x7F6E;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="title">server</span> {</span><br><span class="line">  <span class="comment"># ...</span></span><br><span class="line">  <span class="title">location</span> / {</span><br><span class="line">    <span class="title">google</span> <span class="built_in">on</span>;</span><br><span class="line">    <span class="title">google_ssl_off</span> <span class="string">&quot;www.google.com&quot;</span>;</span><br><span class="line">  }</span><br><span class="line">  <span class="comment"># ...</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <h3 id="&#x8BBE;&#x7F6E;&#x5F00;&#x673A;&#x542F;&#x52A8;">&#x8BBE;&#x7F6E;&#x5F00;&#x673A;&#x542F;&#x52A8;</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi  /etc/rc.<span class="keyword">local</span></span><br></pre></td></tr></table></figure>
 <p>&#x5728;&#x91CC;&#x9762;&#x52A0;&#x4E0A;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x6761;<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/opt/</span>nginx-<span class="number">1.7</span>.<span class="number">8</span><span class="regexp">/sbin/</span>nginx</span><br></pre></td></tr></table></figure></p>
-<p>OK,&#x57FA;&#x672C;&#x7684;&#x914D;&#x7F6E;&#x5B8C;&#x4E86;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x8C37;&#x6B4C;&#x5B66;&#x672F;&#x4EE3;&#x7406;&#x7684;&#x6548;&#x679C;&#x56FE;&#x5427;~<br><img src="http://7xk7he.com1.z0.glb.clouddn.com/1.gif" alt="google&#x5B66;&#x672F;&#x4EE3;&#x7406;&#x56FE;"><br>&#x55EF;&#xFF0C;&#x5F88;&#x597D;&#x3002;Have fun!<br>&#x5177;&#x4F53;&#x6548;&#x679C;&#x8BF7;&#x770B;: <a href="http://www.hlfeel.com" target="_blank" rel="external">http://www.hlfeel.com</a></p>
+<p>OK,&#x57FA;&#x672C;&#x7684;&#x914D;&#x7F6E;&#x5B8C;&#x4E86;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x8C37;&#x6B4C;&#x5B66;&#x672F;&#x4EE3;&#x7406;&#x7684;&#x6548;&#x679C;&#x56FE;&#x5427;~<br><img src="/picture/google scholar.gif" alt="google&#x5B66;&#x672F;&#x4EE3;&#x7406;&#x56FE;"><br>&#x55EF;&#xFF0C;&#x5F88;&#x597D;&#x3002;Have fun!<br>&#x5177;&#x4F53;&#x6548;&#x679C;&#x8BF7;&#x770B;: <a href="http://www.hlfeel.com" target="_blank" rel="external">http://www.hlfeel.com</a></p>
 <h2 id="&#x53C2;&#x8003;&#x7F51;&#x7AD9;">&#x53C2;&#x8003;&#x7F51;&#x7AD9;</h2><p><a href="https://github.com/cuber/ngx_http_google_filter_module/blob/master/README.zh-CN.md" target="_blank" rel="external">Nginx Google &#x6269;&#x5C55;</a>&#x2014;&#x8FD9;&#x662F;&#x5EFA;&#x7ACB;<a href="https://g.wen.lu/" target="_blank" rel="external">https://g.wen.lu</a>&#x7684;&#x65B9;&#x6CD5;</p>
 
       
