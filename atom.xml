@@ -55,7 +55,7 @@
     <link href="http://hlfeel.com/kali/"/>
     <id>http://hlfeel.com/kali/</id>
     <published>2015-07-22T07:17:19.000Z</published>
-    <updated>2015-07-24T05:20:38.000Z</updated>
+    <updated>2015-07-24T05:22:09.000Z</updated>
     <content type="html"><![CDATA[<p><img src="/picture/kali.gif" alt="kali"></p>
 <h2 id="&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;">&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;</h2><p>&#x3000;&#x3000;kali&#x662F;backtrack&#x7CFB;&#x5217;&#x7684;&#x5347;&#x7EA7;&#x7248;&#xFF0C;&#x548C;backtrack&#x7CFB;&#x5217;&#x4E00;&#x6837;&#xFF0C;&#x91CC;&#x9762;&#x96C6;&#x4E2D;&#x4E86;&#x5404;&#x79CD;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x548C;&#x5B89;&#x5168;&#x5BA1;&#x8BA1;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x4E0D;&#x7528;&#x624B;&#x5DE5;&#x4E00;&#x4E2A;&#x4E2A;&#x5730;&#x5B89;&#x88C5;&#x3002;<br><a id="more"></a></p>
 <!-- toc -->
@@ -96,7 +96,7 @@
 <h3 id="&#x5B89;&#x88C5;chromium">&#x5B89;&#x88C5;chromium</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-<span class="keyword">get</span> install chromium-browser</span><br></pre></td></tr></table></figure>
 <p>&#x3000;&#x3000;&#x89E3;&#x51B3;root&#x8D26;&#x53F7;&#x6253;&#x5F00;chromium&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x6253;&#x5F00;/usr/share/applications&#xFF0C;&#x627E;&#x5230;chromium&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x53F3;&#x952E;&#x70B9;&#x51FB;&#x5C5E;&#x6027;&#xFF0C;&#x5C06;&#x547D;&#x4EE4;&#x6539;&#x4E3A;<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/chromium %<span class="keyword">U</span> --user-data-<span class="keyword">dir</span> <span class="label">$HOME</span>&#xFF0C;<span class="keyword">close</span></span><br></pre></td></tr></table></figure></p>
 <p>&#x3000;&#x3000;&#x5173;&#x95ED;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x7528;root&#x8D26;&#x53F7;&#x6253;&#x5F00;chromium&#x4E86;~&#x5982;&#x679C;&#x60F3;&#x8981;&#x4E2D;&#x6587;&#x7248;&#x7684;&#x8BDD;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5B89;&#x88C5;&#x4E86;l10n&#x8FD9;&#x4E2A;&#x5B89;&#x88C5;&#x5305;&#x3002;<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-<span class="keyword">get</span> install chromium-browser-l10n</span><br></pre></td></tr></table></figure></p>
-<p>&#x3000;&#x3000;&#x63A5;&#x7740;&#x5C31;&#x662F;&#x5B89;&#x88C5;SwitchySharp&#xFF0C;&#x8FD9;&#x4E2A;&#x76F4;&#x63A5;&#x5728;&#x6269;&#x5C55;&#x5E94;&#x7528;&#x90A3;&#x91CC;&#x6DFB;&#x52A0;&#x5373;&#x53EF;(&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5207;&#x6362;ss/vpn)<br>&#x3000;&#x3000;&#x6700;&#x540E;&#x6765;&#x4E00;&#x5F20;&#x5B89;&#x88C5;&#x4E86;chromium&#x7684;&#x56FE;&#x7247;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x63A5;&#x7740;&#x5C31;&#x662F;&#x5B89;&#x88C5;SwitchySharp&#xFF0C;&#x8FD9;&#x4E2A;&#x76F4;&#x63A5;&#x5728;&#x6269;&#x5C55;&#x5E94;&#x7528;&#x90A3;&#x91CC;&#x6DFB;&#x52A0;&#x5373;&#x53EF;(&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5207;&#x6362;ss/vpn)&#x3002;</p>
 <h2 id="&#x53C2;&#x8003;&#x7F51;&#x7AD9;">&#x53C2;&#x8003;&#x7F51;&#x7AD9;</h2><ol>
 <li><a href="http://drops.wooyun.org/tips/826" target="_blank" rel="external">Kali Linux&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x5B9E;&#x6218;</a></li>
 <li><a href="http://cn.docs.kali.org/" target="_blank" rel="external">kali &#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x6587;&#x7248;</a></li>
