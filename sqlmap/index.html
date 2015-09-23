@@ -3,34 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Endless Loop</title>
+  <title>关于sqlmap的学习笔记 | Endless Loop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="function countDown(secs,surl){
-    //alert(surl);
-    var jumpto = document.getElementById(&apos;jumpto&apos;);
-    jumpto.innerHTML=secs;
-    if(--secs&amp;gt;0){
-      setTimeout(&quot;countDown(&quot;+secs+&quot;,&apos;&quot;+surl+&quot;&apos;)&quot;,100">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Endless Loop">
-<meta property="og:url" content="http://hlfeel.com/404.html">
+  <meta name="description" content="0x01写在前面的话　　sqlmap是当之无愧的sql注入神器~这里简单地写一下使用它的一些基础流程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于sqlmap的学习笔记">
+<meta property="og:url" content="http://hlfeel.com/sqlmap/index.html">
 <meta property="og:site_name" content="Endless Loop">
-<meta property="og:description" content="function countDown(secs,surl){
-    //alert(surl);
-    var jumpto = document.getElementById(&apos;jumpto&apos;);
-    jumpto.innerHTML=secs;
-    if(--secs&amp;gt;0){
-      setTimeout(&quot;countDown(&quot;+secs+&quot;,&apos;&quot;+surl+&quot;&apos;)&quot;,100">
-<meta property="og:image" content="http://hlfeel.com/picture/404.jpg">
-<meta property="og:updated_time" content="2015-07-22T09:21:42.000Z">
+<meta property="og:description" content="0x01写在前面的话　　sqlmap是当之无愧的sql注入神器~这里简单地写一下使用它的一些基础流程。">
+<meta property="og:image" content="http://hlfeel.com/picture/sqlmap.jpg">
+<meta property="og:updated_time" content="2015-09-14T12:43:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Endless Loop">
-<meta name="twitter:description" content="function countDown(secs,surl){
-    //alert(surl);
-    var jumpto = document.getElementById(&apos;jumpto&apos;);
-    jumpto.innerHTML=secs;
-    if(--secs&amp;gt;0){
-      setTimeout(&quot;countDown(&quot;+secs+&quot;,&apos;&quot;+surl+&quot;&apos;)&quot;,100">
+<meta name="twitter:title" content="关于sqlmap的学习笔记">
+<meta name="twitter:description" content="0x01写在前面的话　　sqlmap是当之无愧的sql注入神器~这里简单地写一下使用它的一些基础流程。">
   
     <link rel="alternative" href="/atom.xml" title="Endless Loop" type="application/atom+xml">
   
@@ -182,11 +167,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-sqlmap" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/404.html" class="article-date">
-  	<time datetime="2015-08-08T12:50:22.000Z" itemprop="datePublished">2015-08-08</time>
+      <a href="/sqlmap/" class="article-date">
+  	<time datetime="2015-09-10T12:37:00.000Z" itemprop="datePublished">2015-09-10</time>
 </a>
     </div>
   
@@ -195,28 +180,59 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于sqlmap的学习笔记
+    </h1>
+  
+
+      </header>
+	  
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/网络/">网络</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <script type="text/javascript">
-  function countDown(secs,surl){
-    //alert(surl);
-    var jumpto = document.getElementById('jumpto');
-    jumpto.innerHTML=secs;
-    if(--secs>0){
-      setTimeout("countDown("+secs+",'"+surl+"')",1000);
-    }
-    else{
-      location.href=surl;
-    }
-  }
-</script>
-<h1 style="text-align:center" id="&#x627E;&#x4E0D;&#x5230;&#x9875;&#x9762;&#x7F51;&#x9875;&#x5C06;&#x4F1A;&#x5728;-5-&#x79D2;&#x540E;&#x8DF3;&#x8F6C;&#x5230;&#x9996;&#x9875;">&#x627E;&#x4E0D;&#x5230;&#x9875;&#x9762;&#xFF0C;&#x7F51;&#x9875;&#x5C06;&#x4F1A;&#x5728;<span id="jumpto"> **5** </span>&#x79D2;&#x540E;&#x8DF3;&#x8F6C;&#x5230;<a href="/">&#x9996;&#x9875;</a></h1> 
+        <p><img src="/picture/sqlmap.jpg" alt="sqlmap"></p>
+<h1 id="0x01&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;">0x01&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;</h1><p>&#x3000;&#x3000;sqlmap&#x662F;&#x5F53;&#x4E4B;&#x65E0;&#x6127;&#x7684;sql&#x6CE8;&#x5165;&#x795E;&#x5668;~&#x8FD9;&#x91CC;&#x7B80;&#x5355;&#x5730;&#x5199;&#x4E00;&#x4E0B;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x6D41;&#x7A0B;&#x3002;</p>
+<a id="more"></a>
+<!-- toc -->
+<ul>
+<li><a href="#&#x83B7;&#x53D6;&#x795E;&#x5668;">&#x83B7;&#x53D6;&#x795E;&#x5668;</a></li>
+<li><a href="#&#x8FD0;&#x884C;&#x795E;&#x5668;">&#x8FD0;&#x884C;&#x795E;&#x5668;</a></li>
+<li><a href="#&#x4E00;&#x6B21;&#x6A21;&#x62DF;&#x7684;&#x8FDB;&#x653B;">&#x4E00;&#x6B21;&#x6A21;&#x62DF;&#x7684;&#x8FDB;&#x653B;</a></li>
+<li><a href="#&#x53C2;&#x8003;&#x7F51;&#x7AD9;">&#x53C2;&#x8003;&#x7F51;&#x7AD9;</a></li>
+</ul>
+<!-- tocstop -->
+<h1 id="&#x83B7;&#x53D6;&#x795E;&#x5668;">&#x83B7;&#x53D6;&#x795E;&#x5668;</h1><p>&#x3000;&#x3000;&#x8981;&#x83B7;&#x5F97;sqlmap&#x795E;&#x5668;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x76F4;&#x63A5;&#x5728;github&#x4E0A;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x5C31;&#x884C;&#x4E86;&#xFF08;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/sqlmapproject/sqlmap" target="_blank" rel="external">https://github.com/sqlmapproject/sqlmap</a>&#xFF09;</p>
+<p>&#x3000;&#x3000;&#x6216;&#x8005;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;git&#x4E0B;&#x8F7D;&#x3002;<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git<span class="annotation">@github</span>.<span class="string">com:</span>sqlmapproject/sqlmap.git</span><br></pre></td></tr></table></figure></p>
+<h1 id="&#x8FD0;&#x884C;&#x795E;&#x5668;">&#x8FD0;&#x884C;&#x795E;&#x5668;</h1><p>&#x3000;&#x3000;&#x4E00;&#x5F00;&#x59CB;&#x53EF;&#x80FD;&#x4F1A;&#x4E0D;&#x4E86;&#x89E3;sqlmap&#x91CC;&#x9762;&#x4F17;&#x591A;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x8FD0;&#x884C;&#x5E2E;&#x52A9;&#x662F;&#x6700;&#x597D;&#x7684;&#x9009;&#x62E9;~<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./sqlmap<span class="class">.py</span> -h #&#x83B7;&#x5F97;&#x5E2E;&#x52A9;</span><br><span class="line">./sqlmap<span class="class">.py</span> -hh #&#x83B7;&#x5F97;&#x8BE6;&#x5C3D;&#x7684;&#x5E2E;&#x52A9;</span><br></pre></td></tr></table></figure></p>
+<h1 id="&#x4E00;&#x6B21;&#x6A21;&#x62DF;&#x7684;&#x8FDB;&#x653B;">&#x4E00;&#x6B21;&#x6A21;&#x62DF;&#x7684;&#x8FDB;&#x653B;</h1><h1 id="&#x53C2;&#x8003;&#x7F51;&#x7AD9;">&#x53C2;&#x8003;&#x7F51;&#x7AD9;</h1><ol>
+<li><a href="http://www.freebuf.com/articles/web/29942.html" target="_blank" rel="external">SQL&#x6CE8;&#x5165;&#x4E4B;SQLmap&#x5165;&#x95E8;</a></li>
+<li><a href="http://wiki.wooyun.org/web:sql" target="_blank" rel="external">SQL&#x6CE8;&#x5165;</a></li>
+<li><a href="http://sqlmap.org/" target="_blank" rel="external">sqlmap&#x5B98;&#x65B9;&#x7F51;&#x7AD9;</a></li>
+<li><a href="http://drops.wooyun.org/tips/143" target="_blank" rel="external">sqlmap&#x7528;&#x6237;&#x624B;&#x518C;</a></li>
+<li><a href="http://drops.wooyun.org/tips/401" target="_blank" rel="external">sqlmap&#x7528;&#x6237;&#x624B;&#x518C;[&#x7EED;]</a></li>
+<li><a href="http://drops.wooyun.org/tips/5254" target="_blank" rel="external">SQLMAP&#x8FDB;&#x9636;&#x4F7F;&#x7528;</a></li>
+<li><a href="http://resources.infosecinstitute.com/sql-injection/" target="_blank" rel="external">SQL injection</a></li>
+</ol>
 
- <p style="text-align:center"> <img src="/picture/404.jpg"></p>
-
-
-
-<script type="text/javascript">countDown(5,'/');</script>
       
     </div>
     
@@ -224,6 +240,25 @@
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/password/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          关于密码找回漏洞的学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/nmap/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于nmap的学习笔记(1)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 
 
@@ -244,10 +279,32 @@
 
 
 
+  <section id="comments">
+  </section>
+  
 </article>
 
 
  
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-sqlmap" data-title="关于sqlmap的学习笔记" data-url="http://hlfeel.com/sqlmap/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'roixppttdr'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  
 
 <script>
   var tocEx = function(el){
@@ -293,7 +350,7 @@ var _hmt = _hmt || [];
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
